@@ -24,7 +24,8 @@ router.get("/", async (req, res) => {
       extra: {
         text: event.eventDesciption,
       },
-      allDay: true
+      allDay: true,
+      _id: event._id
     }));
     res.status(200).json(updatedEvents);
   } catch (err) {
